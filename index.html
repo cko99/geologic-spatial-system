@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIS &amp; Spatial Data Consultant | GEOLOGIC</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background glow -->
+  <div class="aurora"></div>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="logo">GEO<span>LOGIC</span></div>
+    <div class="nav-links">
+      <a href="#what-i-do">Services</a>
+      <a href="#projects">Work</a>
+      <a href="#bento-grid">Stack</a>
+      <a href="#cta" class="btn-primary" style="padding:10px 20px;margin-left:10px;">Request Proposal</a>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+
+    <!-- ─── HERO ──────────────────────────────────────────────────────────── -->
+    <section id="hero">
+      <span class="badge" id="hero-badge">GIS &amp; Spatial Data Consultant</span>
+      <h1>
+        <span id="hero-title-static">Turning Data Into </span><span id="hero-title-accent">Actionable Insights.</span>
+      </h1>
+      <p class="hero-sub" id="hero-sub">
+        I build GIS analysis, dashboards, and spatial visualizations to support clearer decision-making.
+      </p>
+      <button class="btn-primary" onclick="scrollToCTA()">⚡ Start a Project</button>
+    </section>
+
+    <!-- ─── SERVICES ──────────────────────────────────────────────────────── -->
+    <section id="what-i-do">
+      <span class="section-label">WHAT I DO</span>
+      <h2 class="section-title-large">Services built for real outcomes</h2>
+      <p class="section-sub">No fluff. Each deliverable answers a specific business or planning question.</p>
+      <div class="service-cards-grid" id="services-container">
+        <!-- Rendered by script.js → renderServices() -->
+      </div>
+    </section>
+
+    <!-- ─── BENTO GRID / STACK ────────────────────────────────────────────── -->
+    <section class="bento-container" id="bento-grid">
+
+      <!-- Spatial Workflow Pipeline -->
+      <div class="bento-item bento-large pipeline-bento">
+        <h3>Spatial Workflow System</h3>
+        <p>Structured GIS workflow combining Python, SQL, and mapping tools to automate analysis and reduce manual work.</p>
+
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <span class="pipeline-step-label">Input</span>
+            <div class="pipeline-step-bar">
+              <span class="tag">CSV</span>
+              <span class="tag">Spatial Data</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <span class="pipeline-step-label">Processing</span>
+            <div class="pipeline-step-bar">
+              <span class="tag">Python</span>
+              <span class="tag">QGIS</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <span class="pipeline-step-label">Storage</span>
+            <div class="pipeline-step-bar">
+              <span class="tag">SQLite</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step">
+            <span class="pipeline-step-label">Output</span>
+            <div class="pipeline-step-bar">
+              <span class="tag">Map</span>
+              <span class="tag">Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat -->
+      <div class="bento-item bento-small stat-bento">
+        <span class="stat-number" id="projects-count">20+</span>
+        <p>Projects Delivered</p>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="bento-item bento-small tech-stack-bento">
+        <h3>Core Stack</h3>
+        <p>Industry-standard tools for professional firms.</p>
+        <div class="tech-logos" id="tech-logos-container">
+          <!-- Rendered by script.js → renderTechStack() -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── PROJECTS ──────────────────────────────────────────────────────── -->
+    <section id="projects">
+      <h2 class="section-title">Key Projects</h2>
+      <div class="project-list" id="projects-container">
+        <!-- Rendered by script.js → renderProjects() -->
+      </div>
+    </section>
+
+    <!-- ─── CTA / CONTACT FORM ────────────────────────────────────────────── -->
+    <section class="cta-box" id="cta">
+      <h2 class="cta-headline">Ready to Start?</h2>
+      <p class="cta-sub">Share your data challenge. I'll turn it into clear spatial insights.</p>
+
+      <form class="cta-form" id="quoteForm" novalidate>
+
+        <div class="form-field">
+          <label for="clientName">Your Name / Company</label>
+          <input type="text" id="clientName" class="form-input" placeholder="e.g. Acme Corp" required>
+        </div>
+
+        <div class="form-field">
+          <label for="clientEmail">Your Email</label>
+          <input type="email" id="clientEmail" class="form-input" placeholder="you@company.com" required>
+        </div>
+
+        <div class="form-field">
+          <label for="projectType">Project Type</label>
+          <!-- Options populated dynamically by renderFormDropdown() from services.js -->
+          <select id="projectType" class="form-input" required>
+            <option value="" disabled selected>Select a service...</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="projectDesc">Project Description</label>
+          <textarea id="projectDesc" class="form-input" rows="4"
+            placeholder="Describe your requirements, data sources, and expected output..." required></textarea>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn-primary">✉️ Send Request</button>
+        </div>
+
+      </form>
+
+      <span class="trust-badge" id="trust-badge">
+        Response within 24 hours · Structured proposal included
+      </span>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <span id="footer-text">&copy; 2026 GEOLOGIC. Precision GIS &amp; Spatial Solutions.</span>
+  </footer>
+
+  <!-- ─── DATA FILES (order matters) ─────────────────────────────────────── -->
+  <script src="data/profile.js"></script>
+  <script src="data/services.js"></script>
+  <script src="data/projects.js"></script>
+
+  <!-- ─── APP LOGIC ────────────────────────────────────────────────────────── -->
+  <script src="script.js"></script>
+
+</body>
+</html>

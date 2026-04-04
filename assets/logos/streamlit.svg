@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Streamlit mark: two red triangles -->
+  <polygon points="24,6 44,38 4,38" fill="#FF4B4B" opacity="0.15"/>
+  <polygon points="24,10 41,36 7,36" fill="#FF4B4B" opacity="0.4"/>
+  <!-- Top highlight triangle -->
+  <polygon points="24,13 37,33 11,33" fill="#FF4B4B"/>
+  <!-- Inner light triangle -->
+  <polygon points="24,19 33,31 15,31" fill="#FF8C8C" opacity="0.5"/>
+  <!-- Dot at top -->
+  <circle cx="24" cy="13" r="2.5" fill="white" opacity="0.9"/>
+</svg>

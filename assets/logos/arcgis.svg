@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B7BC1"/>
+      <stop offset="100%" stop-color="#1A5FA0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="url(#arcGrad)"/>
+  <path fill="white" d="M24 8L38 36H10L24 8z" opacity="0.95"/>
+  <path fill="#2B7BC1" d="M24 16L33 34H15L24 16z"/>
+  <circle cx="24" cy="30" r="3" fill="white"/>
+</svg>
